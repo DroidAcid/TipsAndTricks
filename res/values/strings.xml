@@ -4,6 +4,25 @@
     <string name="app_name">TipsAndTricks</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    
+    
+    <string name="maths_magic">
+<p>1. take a calculator<br />
+2. type in "12345679" (remember not 8)<br />
+3. times it by any number multiplied by 9,<br />
+lets say if u you want 5as answer , 5*9=45, so 12345679*45=?<br />
+try multiplying by: 9,18,27,36 and so on...<br />
+& see the magic of maths
+</p>
+</string>
+    
+    <string name="addition"> Bla Bla Bla</string>
+    
+    
+    <string name="subtraction"> Bla Bla Bla</string>
+    
+    
+    
     <string name="multiplication">
 <![CDATA[
 <p> <b>Multiplication</b> </p>
@@ -32,5 +51,14 @@ of the first number with the tens digit of the second number. Thus we would get 
 
 ]]>
     </string>
+    
+    
+    
+    <string name="division"> Bla Bla Bla</string>
+    <string name="multiply_by_11"> Bla Bla Bla</string>
+    <string name="multiply_by_12"> Bla Bla Bla</string>
+    <string name="divide_by_9"> Bla Bla Bla</string>
+    <string name="square_2_digit"> Bla Bla Bla</string>
+    
 
 </resources>

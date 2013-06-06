@@ -10,7 +10,7 @@
         android:padding="10dp" >
         
     <TextView 
-     android:id="@+id/TvMultiplication"
+     android:id="@+id/TvMultiply_By_11"
      android:layout_height="wrap_content"
      android:layout_width="wrap_content"   
         />

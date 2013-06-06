@@ -23,7 +23,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TNT_Multiplication"
+            android:name=".TnT_Addition"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name=".TnT_Subtraction"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name=".TnT_Multiplication"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name=".TnT_Division"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name=".TnT_Multiply_by_11"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name=".TnT_Divide_by_12"
+            android:label="@string/app_name" >
+            
+        </activity>
+        
+        <activity
+            android:name=".TnT_Divide_by_9"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name=".TnT_Square_2_Digits"
             android:label="@string/app_name" >
             
         </activity>
