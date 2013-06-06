@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 public class TipsAndTricks extends ListActivity {
 
-	String Tips[] = { "Multiplication", "Division" };
+	String Tips[] = { "    Multiplication", "    Division" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +24,13 @@ public class TipsAndTricks extends ListActivity {
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
-		String Tricks = Tips[position];
+		Class<?>[] classes = {TNT_Multiplication.class } ;
 		
 		try {
-			Class tricks = Class.forName(Tricks);
-			Intent tnt = new Intent(this, tricks);
+			
+			Intent tnt = new Intent(this, classes[position]);
 			startActivity(tnt);
-		} catch (ClassNotFoundException e) {
+		} catch (Exception e) {
 			
 			e.printStackTrace();
 		}
