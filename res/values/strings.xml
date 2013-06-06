@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TipsAndTricks</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="multiplication">
+<![CDATA[
+<p> <b>Multiplication</b> </p>
+<p> <b>Example : 43 x 78</b> </p>
+<p><b><i>Step 1 : Finding the Units Digit</i></b></p>
+<p> The first objective would be to get the units digit. 
+In order to do this we just need to multiply the units digit of both the numbers. thus, 3 x 8 would give us 24. 
+Hence, we would write 4 in the units digit of the answer and carry over the digit 2 to the tens place as follows </p>
+<p>43</p><p> x 78</p><p>_______</p><p>    4</p>
+
+]]>
+    </string>
+
+</resources>
