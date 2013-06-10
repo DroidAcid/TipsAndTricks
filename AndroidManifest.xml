@@ -23,6 +23,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".TnT_MathsMagic"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
             android:name=".TnT_Addition"
             android:label="@string/app_name" >
             
