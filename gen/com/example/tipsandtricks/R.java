@@ -25,28 +25,10 @@ public final class R {
     }
     public static final class id {
         public static final int TextView=0x7f080000;
-        public static final int TvAddition=0x7f080001;
-        public static final int TvCalculatorMagic=0x7f080004;
-        public static final int TvDivide_By_9=0x7f080002;
-        public static final int TvDivision=0x7f080003;
-        public static final int TvMultiplication=0x7f080005;
-        public static final int TvMultiply_By_11=0x7f080006;
-        public static final int TvMultiply_By_12=0x7f080007;
-        public static final int TvSquare_2_Digits=0x7f080008;
-        public static final int TvSubtraction=0x7f080009;
-        public static final int action_settings=0x7f08000a;
+        public static final int action_settings=0x7f080001;
     }
     public static final class layout {
         public static final int tips_and_tricks=0x7f030000;
-        public static final int tnt_addition=0x7f030001;
-        public static final int tnt_divide_by_9=0x7f030002;
-        public static final int tnt_division=0x7f030003;
-        public static final int tnt_maths_magic=0x7f030004;
-        public static final int tnt_multiplication=0x7f030005;
-        public static final int tnt_multiply_by_11=0x7f030006;
-        public static final int tnt_multiply_by_12=0x7f030007;
-        public static final int tnt_square_2_digits=0x7f030008;
-        public static final int tnt_subtraction=0x7f030009;
     }
     public static final class menu {
         public static final int tips_and_tricks=0x7f070000;

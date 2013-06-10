@@ -1,43 +1,69 @@
 package com.example.tipsandtricks;
 
-import android.os.Bundle;
-import android.app.Activity;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import android.app.ListActivity;
-import android.content.Intent;
-import android.view.Menu;
+import android.os.Bundle;
+import android.text.Html;
+import android.text.Spanned;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class TipsAndTricks extends ListActivity {
 
-	String Tips[] = { "Maths Magic", "Addition", "Subtraction", "Multiplication", "Division", "Multiply By 11", "Multiply By 12", "Division By 9", "Square Of 2 Digits"
-								};
+	String Tips[] = { "Maths Magic", "Addition", "Subtraction", "Multiplication", "Division", "Multiply By 11",
+			"Multiply By 12", "Division By 9", "Square Of 2 Digits"
+	};
+	String files[] = { "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html",
+			"tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html"
+	};
 
+	TextView TvTips;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
-		setListAdapter(new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, Tips));
+	super.onCreate(savedInstanceState);
+	setContentView(R.layout.tips_and_tricks);
+	setListAdapter(new ArrayAdapter<String>(this,
+	android.R.layout.simple_list_item_1, Tips));
+	TvTips = (TextView) findViewById(R.id.TextView);
+	
 	}
-
+	
+	
+	
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
-		Class<?>[] classes = { TnT_MathsMagic.class, TnT_Addition.class, TnT_Subtraction.class, TnT_Multiplication.class,
-								TnT_Division.class,	TnT_Multiply_by_11.class, TnT_Multiply_by_11.class, Tnt_Divide_by_9.class, 
-								TnT_Square_2_Digits.class,
-					} ;
 		
+		Toast.makeText(this, Tips[position], Toast.LENGTH_SHORT).show();
+		
+		Spanned inHtmlCC = Html.fromHtml(getTipsText(files[position]));
+	    TvTips.setText(inHtmlCC);
+	}
+
+	
+	
+	public String getTipsText(String filename){
+		InputStream is= null;
+
+        String about="";
 		try {
-			
-			Intent tnt = new Intent(this, classes[position]);
-			startActivity(tnt);
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-		}
+			is = getResources().getAssets().open(filename);
+			InputStreamReader ir = new InputStreamReader(is);
+	        BufferedReader br = new BufferedReader(ir);
+            String line;
+            while ((line = br.readLine())!= null ) {
+                about = about + line;
+            }
+			is.close();
+		} catch (IOException e) {}
+
+		return about;
 	}
 
 }

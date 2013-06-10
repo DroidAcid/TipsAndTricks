@@ -1,26 +1,12 @@
 package com.example.tipsandtricks;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Locale;
-
-
-import android.app.DialogFragment;
 import android.app.ListActivity;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.text.Html;
-import android.text.Spanned;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TipsNdTricks extends ListActivity {
 
@@ -35,9 +21,9 @@ public class TipsNdTricks extends ListActivity {
 	setListAdapter(new ArrayAdapter<String>(this,
 	android.R.layout.simple_list_item_1, Tips));
 	TvTips = (TextView) findViewById(R.id.TextView);
-	Spanned inHtmlCC = Html.fromHtml(getTipsText());
+	//Spanned inHtmlCC = Html.fromHtml(getTipsText());
     
-    TvTips.setText(inHtmlCC);
+    //TvTips.setText(inHtmlCC);
 	}
 	
 	
@@ -46,24 +32,16 @@ public class TipsNdTricks extends ListActivity {
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
 		
-		
-		try {
-			String[] fileName = {TnT};
-			InputStream classes = getResources().getAssets().open(fileName);
-			InputStreamReader ir = new InputStreamReader(classes);
-	        BufferedReader br = new BufferedReader(ir);
-			Intent tnt = new Intent(this, fileName[position]);
-			startActivity(tnt);
-		} catch (IOException e) {
+		Toast.makeText(this, Tips[position], Toast.LENGTH_SHORT).show();
 
-			
-			e.printStackTrace();
-		}
+		
+			/*Intent tnt = new Intent(this, fileName[position]);
+			startActivity(tnt);*/
 	}
 
 	
 	
-	public String getTipsText(){
+	/*public String getTipsText(){
 		InputStream is= null;
 
 		
@@ -80,6 +58,6 @@ public class TipsNdTricks extends ListActivity {
 		} catch (IOException e) {}
 
 		return about;
-	}
+	}*/
 
 }

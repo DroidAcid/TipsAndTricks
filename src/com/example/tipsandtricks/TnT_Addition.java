@@ -1,37 +1,18 @@
 package com.example.tipsandtricks;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Locale;
+import android.app.Activity;
 
-
-import android.app.DialogFragment;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.text.Html;
-import android.text.Spanned;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
-public class TnT_Addition extends DialogFragment {
+public class TnT_Addition extends Activity {
 
 	public static TnT_Addition newInstance() {
         TnT_Addition f = new TnT_Addition();
         return f;
     }
 
-	@Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setStyle(DialogFragment.STYLE_NORMAL, 0);
-        setRetainInstance(false);
-    }
+	
 
+	
+	/*
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -75,5 +56,5 @@ public class TnT_Addition extends DialogFragment {
 
 		return about;
 	}
-
+*/
 }
