@@ -17,10 +17,13 @@ import android.widget.Toast;
 public class TipsAndTricks extends ListActivity {
 
 	String Tips[] = { "Maths Magic", "Addition", "Subtraction", "Multiplication", "Division", "Multiply By 11",
+			"Multiply By 12", "Division By 9", "Square Of 2 Digits",
 			"Multiply By 12", "Division By 9", "Square Of 2 Digits"
 	};
-	String files[] = { "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html",
-			"tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html", "tips/TnT_AddingTime.html"
+	String files[] = { "tips/TnT_AddingTime.html", "tips/TnT_Addition.html", "tips/TnT_AddTime.html", 
+			"tips/TnT_BeautyOfMaths.html",	"tips/TnT_CalcMagic.html", "tips/TnT_DateOfTheDay.html", 
+			"tips/TnT_Multiplication.html", "tips/TnT_PrimeNumbers.html", "tips/TnT_SpecialNumbers.html", 
+			 "tips/TnT_Squares.html",  "tips/TnT_Subtraction.html",  "tips/TnT_Tricks.html"
 	};
 
 	TextView TvTips;
